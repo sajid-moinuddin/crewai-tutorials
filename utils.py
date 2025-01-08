@@ -7,6 +7,11 @@ from dotenv import load_dotenv, find_dotenv
 def load_env():
     _ = load_dotenv(find_dotenv())
 
+def get_spider_api_key():
+    load_env()
+    spider_api_key = os.getenv("SPIDER_API_KEY")
+    return spider_api_key
+
 def get_openai_api_key():
     load_env()
     openai_api_key = os.getenv("OPENAI_API_KEY")
